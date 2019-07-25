@@ -25,7 +25,7 @@ const Profile = createStackNavigator({
 
 const TabNav = createBottomTabNavigator({
     Home: {
-        screen: Home,
+        screen: Home
 
     },
     Profile: {
