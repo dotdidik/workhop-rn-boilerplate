@@ -4,6 +4,10 @@
 - React Navigation
 - native-base
 - @expo/vector-icons
+- axios
+- react-native-image-picker
+- react-navigation
+- react-native-vector-icons
 
 *A sample app using react native for iOS & Android*
 
@@ -14,23 +18,33 @@
 **Step 2:** install node modules
 
 ```
-yarn install
+$ yarn install
+```
+or
+```
+$ npm install
+```
+**Step 3:** Setup jetifier and jetify
+
+```
+$ npm i jetifier
+$ npx jetify
 ```
 
 *Before run android build, setup [Android Studio](https://facebook.github.io/react-native/docs/android-setup.html)*
 
-**Step 3:** If Android
+**Step 4:** If Android
 
 ```
-react-native run-android
+$ react-native run-android
 ```
 
 *Before running iOS build, Install [Xcode](https://developer.apple.com/xcode/download/)*
 
-**Step 4:** If iOS
+**Step 5:** If iOS
 
 ```
-react-native run-ios
+$ react-native run-ios
 ```
 
 That's all
