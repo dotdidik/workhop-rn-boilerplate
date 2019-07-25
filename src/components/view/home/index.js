@@ -1,21 +1,29 @@
 import React from 'react';
-import { Text, View, Button } from 'react-native';
+import { ScrollView } from 'react-native';
+import CardStatus from '../../common/statusCard';
+import { List, ListItem, Left, Body, Right, Thumbnail, Input, Text, Form, Textarea } from 'native-base'
+import UpdateStatus from './updateStatus';
 
 class HomeScreen extends React.Component {
     static navigationOptions = {
         headerTitle: 'TIMELINE',
     };
     render() {
-      return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <Text>Home!</Text>
-          <Button
-            title="Go to Details"
-            onPress={() => this.props.navigation.navigate('Details')}
-          />
-        </View>
-      );
+        return (
+            <ScrollView>
+                    <ListItem style={{marginBottom: 20}} avatar button onPress={() => this.props.navigation.navigate('UpdateStatus')}>
+                        <Left>
+                            <Thumbnail source={{ uri: 'https://avatars2.githubusercontent.com/u/26860501?s=460&v=4' }} />
+                        </Left>
+                        <Body>
+                            <Text>Update Status</Text>
+                        </Body>
+                        <Right />
+                    </ListItem>
+                <CardStatus />
+            </ScrollView>
+        );
     }
-  }
+}
 
 export default HomeScreen
