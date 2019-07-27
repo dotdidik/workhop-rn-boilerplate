@@ -3,7 +3,8 @@ import { createAppContainer, createBottomTabNavigator, createStackNavigator } fr
 import HomeScreen from '../home';
 import ProfileScreen from '../profile';
 import DetailScreen from '../detail';
-import UpdateStatusView from '../updateStatus';
+import ProductsScreen from '../products';
+import PDetails from '../products/details';
 
 const Home = createStackNavigator({
     MainHome: {
@@ -11,9 +12,6 @@ const Home = createStackNavigator({
     },
     Details: {
         screen: DetailScreen,
-    },
-    UpdateStatus: {
-        screen: UpdateStatusView
     }
 })
 
@@ -23,14 +21,26 @@ const Profile = createStackNavigator({
     },
 })
 
+const Product = createStackNavigator({
+    Product: {
+        screen: ProductsScreen
+    },
+    PDetails: {
+        screen: PDetails
+    }
+})
+
 const TabNav = createBottomTabNavigator({
     Home: {
         screen: Home
 
     },
+    Product: {
+        screen: Product
+    },
     Profile: {
         screen: Profile
-    },
+    }
 
 })
 

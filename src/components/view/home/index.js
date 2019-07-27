@@ -1,5 +1,6 @@
 import React from 'react';
 import { ScrollView, Text, Button } from 'react-native';
+import MainCard from '../../common/mainCard';
 class HomeScreen extends React.Component {
     static navigationOptions = {
         headerTitle: 'TIMELINE',
@@ -7,11 +8,7 @@ class HomeScreen extends React.Component {
     render() {
         return (
             <ScrollView>
-                    <Text>Home Page</Text>
-                    <Button 
-                        onPress={() => this.props.navigation.navigate('Details')}
-                        title = "Go to details"
-                    />
+                <MainCard />
             </ScrollView>
         );
     }
